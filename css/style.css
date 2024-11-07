@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+
+}
+
+#gioi_thieu {
+    background-color: #f4f4f9;
+    background-image: url(https://photo.znews.vn/w1920/Uploaded/ayhunwx/2017_08_17/1_zing.JPG);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main {
+    padding-top: 15px;
+    padding-bottom: 50px;
+    text-align: left;
+    background-color: #f0f0f0;
+}
+
+.media-container {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    /* Căn giữa ảnh và video theo chiều dọc */
+    gap: 5px;
+    /* Khoảng cách giữa video và ảnh */
+    border-radius: 5px;
+}
+
+aside h1 {
+    margin: 0;
+    /* Loại bỏ khoảng cách mặc định của h1 */
+}
+
+aside {
+    background-color: #696969;
+    color: yellow;
+    border-radius: 5px;
+    /* Làm tròn các góc */
+    text-align: center;
+    /* Căn giữa chữ */
+}
+
+#logo_neu {
+    float: left;
+    margin-right: 10px;
+}
+
+#noi_dung {
+    padding-top: 15px;
+    text-align: left;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(210, 60%, 80%);
+    /* Màu nền xanh khói */
+    padding: 10px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng cho navbar */
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.menu-item {
+    position: relative;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Đổ bóng cho chữ */
+    transition: color 0.3s, text-shadow 0.3s;
+    /* Hiệu ứng chuyển đổi */
+}
+
+.menu-item:hover {
+    color: hsl(45, 100%, 50%);
+    /* Màu chữ khi hover */
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.7);
+    /* Hiệu ứng ánh sáng khi hover */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    list-style: none;
+    width: max-content;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Đổ bóng cho submenu */
+}
+
+.menu-item:hover .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.submenu li a {
+    color: rgb(14, 197, 47);
+    /* Màu chữ cho các mục submenu */
+    display: block;
+    padding: 5px 10px;
+    text-align: left;
+    /* Căn trái cho các mục submenu */
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển đổi cho background */
+}
+
+.submenu li a:hover {
+    background-color: #20d95e;
+    /* Nền khi hover vào mục submenu */
+    color: white;
+    /* Màu chữ khi hover */
+}
+
+a {
+    text-decoration: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column a {
+    color: rgb(14, 197, 47);
+    /* Màu chữ cho các liên kết trong cột */
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.full-width-div {
+    width: 100%;
+    padding: 20px;
+
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+
+/*Css cho card*/
+.exam-list {
+    padding-top: 30px;
+}
+
+.exam-list .card {
+    background-color: #e3f2fd;
+    /* Nền thẻ màu xanh nhạt */
+    border-color: #90caf9;
+    /* Viền xanh nhạt */
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Đồng đều chiều cao */
+}
+
+.exam-list .card:hover {
+    transform: scale(1.05);
+    /* Phóng to nhẹ khi rê chuột */
+}
+
+.exam-list .card img {
+    height: 200px;
+    /* Chiều cao cố định */
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị méo */
+}
+
+.exam-list .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Căn đều nội dung trong card */
+    text-align: center;
+    padding: 20px;
+}
+
+.card-title {
+    color: #0d47a1;
+    /* Màu xanh đậm cho tiêu đề */
+    font-weight: bold;
+}
+
+.card-text {
+    color: #1565c0;
+    /* Màu xanh trung bình cho nội dung văn bản */
+}
+
+#search-box {
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+#search-text {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+    width: 0;
+    padding: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+#search-box:hover #search-text,
+#search-box #search-text:focus {
+    width: 200px;
+    padding: 5px;
+}
+
+#search-btn {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    color: #F7941D;
+}
+
+.btn btn-primary {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary {
+    background-color: #1e88e5;
+    /* Màu xanh cho nút */
+    border-color: #1e88e5;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1565c0;
+    /* Đổi màu xanh đậm khi rê chuột */
+    border-color: #1565c0;
+}
+
+/*css cho tài liệu */
+/* CSS tùy chỉnh cho phần Đóng góp tài liệu */
+.document-exchange {
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #1a1f36;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #f0f4f8;
+    position: relative;
+    overflow: hidden;
+}
+
+.document-exchange h2 {
+    font-size: 32px;
+    color: #e0e7ff;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(99, 102, 241, 0.6);
+}
+
+.document-exchange .upload-form h3 {
+    font-size: 22px;
+    color: #d1d5db;
+    margin-bottom: 15px;
+    font-style: italic;
+    border-bottom: 2px solid #4f46e5;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 4px rgba(99, 102, 241, 0.4);
+}
+
+.document-exchange #fileUpload {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid #6366f1;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: rgba(99, 102, 241, 0.1);
+    color: #d1d5db;
+    margin-right: 12px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.document-exchange #fileUpload:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+    border-color: #818cf8;
+}
+
+.document-exchange button {
+    padding: 10px 18px;
+    font-size: 16px;
+    color: #f9fafb;
+    background-color: #6366f1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.document-exchange button:hover {
+    background-color: #4f46e5;
+    transform: scale(1.05);
+}
+
+/* Styling for document-list */
+.document-exchange .document-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.document-exchange .document-list li {
+    width: 80%;
+    margin: 10px 0;
+    background-color: #252a41;
+    border-radius: 8px;
+    padding: 15px;
+    color: #93c5fd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.document-exchange .document-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+}
+
+.document-exchange .document-list li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #93c5fd;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.document-exchange .document-list li a:hover {
+    color: #60a5fa;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-radius: 5px;
+}
